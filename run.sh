@@ -59,9 +59,10 @@ stopScreens () {
 }
 
 createProject () {
-    response=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${TOKEN}" -d "{\"name\":\"${PROJECT_NAME}\"}" http://${SERVER_DOMAIN}/api/p/create)
-    url=$(echo ${response} | python -c "import sys, json; print(json.load(sys.stdin)['url'])")
-    echo ${url}
+    data=$(curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer ${TOKEN}" -d "{\"name\":\"${PROJECT_NAME}\"}" http://${SERVER_DOMAIN}/api/p/create)
+    echo $(data) > /tmp/output/project-info.txt
+    url=$(echo ${data} | python -c "import sys, json; print(json.load(sys.stdin)['url'])")
+    echo $(url)
 }
 
 enableFlamenco () {
@@ -91,9 +92,11 @@ runserver
 
 TOKEN=$(getToken)
 PROJECT_URL=$(createProject)
+MANAGER_ID=$(createManager)
 
 enableFlamenco
 createManager
+# TODO: Link manager to project.
 
 while :
 do
