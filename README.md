@@ -63,7 +63,8 @@ Prerequisite: You will need git, docker and docker-compose installed in order to
 
 5. Edit your hosts file to use the domain name you provided in the yml file (if you don't have a dns entry set up.)
 
-6. You should be able to go to <SERVER_SCHEME>://<SERVER_DOMAIN> and see the pillar welcome page.
+6. After a brief delay, You should be able to go to <SERVER_SCHEME>://<SERVER_DOMAIN> and see the pillar welcome page.
+    * You can view progress of the image setting up by using `docker logs -f` on the flamenco container.
 
 7. To go to your project, go to <SERVER_SCHEME>://<SERVER_DOMAIN>/p/
 
