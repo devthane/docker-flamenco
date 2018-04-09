@@ -11,8 +11,6 @@ RUN mkdir ~/envs && virtualenv -p $(which python3.6) ~/envs/flamenco
 RUN mkdir /data && cd /data && git clone git://git.blender.org/flamenco.git && \
     git clone git://git.blender.org/pillar.git && git clone git://git.blender.org/pillar-python-sdk.git
 
-COPY layout.pug /data/pillar/src/templates/layout.pug
-
 RUN /bin/bash -c "source ~/envs/flamenco/bin/activate && cd /data/flamenco && pip install -r requirements-dev.txt && \
     pip install -e . && npm install && node node_modules/gulp/bin/gulp && cd /data/pillar && pip install -e . && \
     npm install && node node_modules/gulp/bin/gulp && cd /data/pillar-python-sdk && pip install -e ."
@@ -20,7 +18,7 @@ RUN /bin/bash -c "source ~/envs/flamenco/bin/activate && cd /data/flamenco && pi
 COPY config_local.py /data/flamenco/config_local.py
 COPY manage.py /data/flamenco/manage.py
 COPY runserver.py /data/flamenco/runserver.py
-COPY run.sh /data/flamenco/run.sh
+ADD scripts /data/flamenco/
 
 RUN mkdir -p /tmp/output
 
