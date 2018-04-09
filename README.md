@@ -16,6 +16,16 @@ However, if you are locked down locally with a firewall and your system itself i
 
 ## How To Use:
 
+### Info:
+    
+I haven't set up automatic linking of the auto created manager to the project yet, but I'm working on it.
+
+To get that working until I can, you're going to have to look through the flamenco code.
+
+I expect to have this working soon.
+
+### Walkthrough:
+
 Prerequisite: You will need git, docker and docker-compose installed in order to use this repository.
 * If you don't know anything about docker, I highly recommend you study up on that first.
 
@@ -66,6 +76,14 @@ Prerequisite: You will need git, docker and docker-compose installed in order to
 6. After a brief delay, You should be able to go to <SERVER_SCHEME>://<SERVER_DOMAIN> and see the pillar welcome page.
     * You can view progress of the image setting up by using `docker logs -f` on the flamenco container.
 
-7. To go to your project, go to <SERVER_SCHEME>://<SERVER_DOMAIN>/p/
+7. Login via `<SERVER_SCHEME>://<SERVER_DOMAIN>/login/local`
+    * Your username will be the part of your email before the @ sign.
+
+8. To go to your project, go to <SERVER_SCHEME>://<SERVER_DOMAIN>/p/
+
+9. To get information on your project, check the output directory you set up in the yaml file.
+ 
+    A couple of files should have been created there with needed info 
+
 
 Now if you have any questions beyond this, create an issue and we'll figure it out together.
