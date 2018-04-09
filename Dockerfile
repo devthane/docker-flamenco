@@ -18,7 +18,7 @@ RUN /bin/bash -c "source ~/envs/flamenco/bin/activate && cd /data/flamenco && pi
 COPY config_local.py /data/flamenco/config_local.py
 COPY manage.py /data/flamenco/manage.py
 COPY runserver.py /data/flamenco/runserver.py
-COPY run.sh /data/flamenco/run.sh
+ADD scripts /data/flamenco/
 
 RUN mkdir -p /tmp/output
 
