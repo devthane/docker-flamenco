@@ -1,7 +1,7 @@
 version: "2"
 services:
   flamenco:
-    build: ./
+    image: devthane/flamenco:0.1.0
     environment:
       PILLAR_ADMIN_EMAIL:
       SUBSCRIBER_EMAIL:
