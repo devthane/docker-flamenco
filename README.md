@@ -2,7 +2,7 @@
 
 ## UPDATE:
 
-This is not working locally at the moment. Please see: [https://github.com/devthane/docker-flamenco/issues/5]()
+This is not working locally at the moment. Please see: [https://github.com/devthane/docker-flamenco/issues/5](https://github.com/devthane/docker-flamenco/issues/5)
 
 ## Introduction:
 
