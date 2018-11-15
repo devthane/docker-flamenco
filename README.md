@@ -1,5 +1,9 @@
 # Docker-Flamenco
 
+## UPDATE:
+
+This is not working locally at the moment. Please see: [https://github.com/devthane/docker-flamenco/issues/5]()
+
 ## Introduction:
 
 This Repository is designed to make running your own flamenco-server stack locally much easier.
